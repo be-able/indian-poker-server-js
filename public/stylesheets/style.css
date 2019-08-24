@@ -1,0 +1,706 @@
+*{
+	margin:0;
+	padding:0;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-x:hidden;
+}
+a:hover{
+	text-decoration: none;
+}
+/*top-header*/
+#top-header{
+	width: 100%;
+	height: 380px;
+	background-color: #0078d8;
+}
+#top-header #top-header-inner{
+	margin:0 auto;
+	width: 800px;
+	height: auto;
+}
+#top-header #top-header-inner .top-left{
+	padding-top:110px;
+	float: left;
+	color:white;
+}
+#top-header #top-header-inner .top-left h1{
+	font-size:45px;
+}
+#top-header #top-header-inner .top-left p{
+	font-size:20px;
+}
+#top-header #top-header-inner .top-right{
+	padding: 40px 60px;
+	float:right;
+	width: 350px;
+	height: auto;
+}
+#top-header #top-header-inner .top-right #form-header{
+	font-size: 18px;
+}
+
+#top-header #top-header-inner .top-right #form-header .clear{
+	clear:both;
+}
+
+#top-header #top-header-inner .top-right #form-header p{
+	color: white;
+	display: inline-block;
+	float: left;
+}
+#top-header #top-header-inner .top-right #form-header a{
+	color:white;
+	display: inline-block;
+	float: right;
+	text-decoration: none;
+	border: 1px solid #0078D8;
+}
+#top-header #top-header-inner .top-right #form-header a:hover{
+	text-decoration: none;
+	border: 1px solid white;
+	border-radius: 4px;
+}
+#top-header #top-header-inner .top-right #form-header a:active{
+	text-decoration: none;
+}
+input[type='submit'],#signup a{
+	font-size: 16px;
+	color: white;
+	background: #80C3F7;
+	text-align: center;
+	text-decoration: none;
+}
+#signup{
+	display: none;
+}
+#signup ul{
+	padding-left:10px;
+	list-style: none;
+	width:230px;
+	height: auto;
+	color:orange;
+}
+.inline{
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 16px;
+}
+.left{
+	float:left;
+}
+.right{
+	float: right;
+}
+#top-header #login{
+	padding-top: 25px;
+}
+#top-header #login p{
+	color:white;
+	font-size: 16px;
+}
+/*#header #nav*/
+#header{
+	width: 100%;
+	height: 45px;
+	background: #0767c8;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	z-index: 20;
+	left: 0;
+	top:0;
+}
+#header #nav{
+	width: 960px;
+	margin: 0 auto;
+	height: auto;
+}
+#header #nav ul{
+	list-style: none;
+	font-size: 16px;
+	color:white;
+	line-height: 45px;
+}
+#header #nav ul li{
+	display: inline-block;
+	margin-right: 30px;
+}
+#header #nav ul li a{
+	color:white;
+	text-decoration: none;
+}
+#header #nav ul li #logo{
+	font-size: 28px;
+}
+#header #nav-form{
+	height: 45px;
+	position: absolute;
+	width: 350px;
+	top:5px;
+}
+#header #nav-submit{
+	position: absolute;
+	top:1px;
+	right: 0;
+	width: 35px;
+	height: 30px;
+	border:0;
+}
+#home-page{
+	margin-left: 350px;
+}
+#profile{
+	margin-right: 0;
+}
+/*发布文章模块的CSS*/
+#post-blog{
+	display: none;
+}
+#post-blog #mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 95;
+	width:100%!important;
+	height: 100%!important;
+	background: rgba(100,100,100,.3);
+}
+#post-blog #blog-form{
+	width:840px;
+	height: 580px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-top: -290px;
+	margin-left: -420px;
+	border: 1px solid #888;
+	border-radius: 8px;
+	box-shadow: 0 0 80px 0 rgba(0,0,0,.3);
+	background-color: #ffffff;
+	z-index: 99;
+}
+#post-blog #blog-form #blog-form-header{
+	width: 100%;
+	padding: 10px 20px;
+	height: 40px;
+	background: #0078D8;
+	font-size: 15px;
+	color:white;
+	border-radius: 6px 6px 0 0;
+}
+#post-blog #blog-form #blog-form-header p{
+	float:left;
+}
+#post-blog #blog-form #blog-form-header a{
+	float:right;
+	color:white;
+	font-size: 18px;
+}
+#post-blog #blog-form #blog-form-body{
+	width: 100%;
+	height:360px;
+	border: 0 0 6px 6px;
+	padding: 10px;
+
+}
+#post-blog #blog-form #blog-form-body textarea{
+	resize:none;
+	border:1px solid silver;
+	padding:1em;
+}
+#post-blog #blog-form #blog-form-body #label-explain{
+	color:#ccc;
+	font-size: 14px;
+	font-weight: normal;
+}
+#post-blog #blog-form #blog-form-body .orange{
+	color:orange;
+}
+#post-blog #blog-form #blog-form-body .btn-primary{
+	position: absolute;
+	right: 10px;
+	bottom: 17px;
+	width: 70px;
+}
+#post-blog #blog-form #blog-form-body label{
+	font-weight: normal;
+	color:#555;
+}
+#post-blog #blog-form #blog-form-body #editor{
+	resize:none; 
+	overflow:auto; 
+	border:1px solid silver; 
+	border-radius:5px; 
+	height:300px;
+	width: 100%;
+	padding:1em;
+}
+#post-blog #blog-form #blog-form-body #editor .textarea-text{
+	color:#ccc;
+}
+/*Blog主页主体部分CSS*/
+#blog-body{
+	width:80%;
+	height: auto;
+	margin: 0 auto;
+	padding-top:60px;
+	background: #fff;
+}
+#blog-body #body-left{
+	width: 70%;
+	padding:10px;
+	display: inline-block;
+}
+#blog-body ul{
+	list-style: none;
+}
+#blog-body #body-left ul li{
+	position: relative;
+}
+#blog-body #body-left ul p{
+	line-height: 1.7;
+}
+#blog-body #body-left ul li .vote{
+	width:40px;
+	height: 50px;
+	float: left;
+	margin-left: -50px;
+	text-align: center;
+	vertical-align: center;
+}
+#blog-body #body-left ul li .vote button{
+	margin: 0;
+	padding:0;
+	display: block;
+	width: 40px;
+	height: 20px;
+	background: #eff6fa;
+	border-radius: 3px;
+	color:#698ebf;
+	border:none;
+	box-shadow: 1px 1px 1px #eee;
+}
+#blog-body #body-left ul li .vote .up{
+	height: 40px;
+	margin-bottom: 6px;
+}
+#blog-body #body-left ul li .vote .pressed{
+	background: #698ebf;
+	color:#eff6fa;
+}
+#blog-body #body-left ul li .vote button:hover{
+	background: #698ebf;
+	color:#eff6fa;
+}
+#blog-body #body-left ul li .vote p{
+	line-height: 14px;
+	font-size: 12px;
+	margin: 0;
+}
+#blog-body #body-left ul li .tags a[role='tag']{
+	font-size:12px;
+	background: #eff6fa;
+	border-radius: 30px;
+	margin: 0 5px 0 5px;
+	padding:5px 8px;
+}
+#blog-body #body-left ul li .tags a[role='tag']:hover{
+	background: #698ebf;
+	color:#eff6fa;
+	text-decoration: none;
+}
+#blog-body #body-left ul li .title{
+	font-weight: 700;
+	font-size: 14px;
+	color:#666;
+	line-height: 1.7;
+}
+#blog-body #body-left ul li a[role='modify'],
+#blog-body #body-left ul li a[role='reply'],
+#blog-body #body-left ul li a[role='delate']{
+	font-size: 12px;
+	color:#bbb;
+	text-decoration: none;
+}
+#blog-body #body-left ul li a[role='modify']:hover,
+#blog-body #body-left ul li a[role='reply']:hover,
+#blog-body #body-left ul li a[role='delate']:hover
+{
+	color:#333;
+}
+#blog-body #body-left ul li .voter{
+	font-size: 12px;
+	color:#aaa;
+	line-height: 12px;
+}
+
+#blog-body #body-left ul li .content{
+	font-size: 13px;
+	color:#222;
+	line-height: 1.7;
+}
+#blog-body #body-left ul li .footer{
+	font-size: 12px;
+	color:#999;
+}
+/*首页回复中的CSS*/
+#blog-body #body-left .get-comments{
+	width: 100%;
+	height: auto;
+	border:1px solid silver;
+	border-radius: 10px;
+	padding:10px;
+	position: relative;
+}
+#blog-body #body-left .get-comments .arrow{
+	display: block;
+	position: absolute;
+	top:-10px;
+	left:150px;
+	width:0px;
+	height:0px; 
+	border-style:dashed dashed solid dashed;
+    border-color:transparent transparent #ddd transparent;
+    border-width: 0px 10px 10px 10px;
+}
+#blog-body #body-left .get-comments .arrow_svg{
+	display: block;
+	position: absolute;
+	top:-10px;
+	left:150px;
+}
+#blog-body #body-left .get-comments .comment-header{
+	margin: 0;
+	font-size: 12px;
+	color:#999;
+}
+#blog-body #body-left .get-comments .comment-body{
+	margin: 4px 0 4px 0;
+	color:#333;
+}
+#blog-body #body-left .get-comments hr{
+	margin: 4px 0 4px 0;
+}
+#blog-body #body-left .get-comments .textarea{
+	width:100%;
+	min-height: 40px;
+	resize:vertical;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	padding:5px;
+}
+#blog-body #body-left .get-comments .comment-wrapper{
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 45px;
+}
+#blog-body #body-left .get-comments .comment-wrapper .form-group{
+	margin: 0;
+	line-height: 45px;
+	color:#aaa;
+	font-size: 13px;
+}
+#blog-body #body-left .get-comments .comment-wrapper .form-group .orange{
+	color:orange;
+}
+#blog-body #body-left .get-comments .post-comment{
+	position: absolute;
+	right: 5px;
+	bottom: 2px;
+}
+#blog-body #body-left .get-comments .close-comment{
+	position: absolute;
+	right: 100px;
+	bottom: 10px;
+	color:#888;
+}
+/*文章修改部分的css*/
+#body-left .title-modify{
+	width:100%;
+	height: 40px;
+	border-radius: 5px;
+	position: relative;
+	margin-bottom: 10px;
+}
+#body-left .title-modify .cancel-modify{
+	position: absolute;
+	right:66px;
+	bottom:10px;
+	font-size: 14px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#body-left .title-modify .textarea{
+	width:100%;
+	height: 40px;
+	padding: 10px;
+	padding-right: 50px;
+	border-radius: 5px;
+	border:1px solid silver;
+}
+#body-left .title-modify button{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 40px;
+}
+/*添加和删除标签的css*/
+#body-left .tags{
+	display: inline-block;
+}
+#body-left .tags span:hover{
+	color: orange;
+}
+#body-left .tag-modify{
+	width:150px;
+	display: inline-block;
+	position: relative;
+}
+#body-left .tag-modify input{
+	border-radius: 30px;
+}
+#body-left .tag-modify a{
+	display: inline-block;
+	width:33px;
+	height: 33px;
+	position: absolute;
+	right:0;
+	top:0;
+	font-size: 24px;
+	text-align: center;
+	line-height: 38px;
+}
+#body-left div[role="tag-error"]{
+	position: relative;
+	height: 25px;
+	width: 100%;
+}
+#body-left .tag-error-inner{
+	position: absolute;
+	width:150px;
+	display: block;
+}
+/*文章内容修改*/
+#body-left .content-edit{
+	border:1px solid silver;
+	border-radius: 10px;
+	width: 100%;
+	height: 400px;
+	overflow: auto;
+	padding: 1em;
+}
+#body-left .content-modify-control{
+	width: 100%;
+	height: 40px;
+	position: relative;
+}
+#body-left .content-modify-control a{
+	position: absolute;
+	right: 93px;
+	top:12px;
+}
+#body-left .content-modify-control button{
+	position: absolute;
+	right: 16px;
+	top:3px;
+}
+/*blog右边部分的css*/
+#blog-body #body-right{
+	width: 30%;
+	padding:10px;
+	display: inline-block;
+	float: right;
+	position: relative;
+	height: auto;
+}
+#blog-body #body-right #right-fixed{
+	position:fixed;
+	width: 24%;
+	height: auto;
+}
+#blog-body #body-right #right-fixed .small{
+	font-size: 12px;
+	color: #999;
+}
+#blog-body #body-right #right-fixed .right_fixed_inner{
+	margin-bottom: 20px;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid #eee;
+	padding: 10px;
+}
+#blog-body #body-right #right-fixed .right_fixed_inner hr{
+	margin:5px 0 5px 0;
+}
+#blog-body #body-right #right-fixed #myCV{
+	background: #eff6fa;
+	position: relative;
+}
+#blog-body #body-right #right-fixed #myCV:hover .close_cv{
+	display: block;
+}
+#blog-body #body-right #right-fixed #myCV .close_cv{
+	position: absolute;
+	right: 8px;
+	top:5px;
+	display: none;
+}
+#blog-body #body-right #right-fixed #myCV h4{
+	text-align: center;
+	color:#444;
+}
+#blog-body #body-right #right-fixed #myCV #download{
+	display: block;
+	width:150px;
+	height: 40px;
+	margin: 0 auto;
+	background: #86b846;
+	color: white;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+}
+#blog-body #body-right #right-fixed #myCV #download:hover{
+	background: #4fb746;
+}
+/*通知栏的css*/
+#inform{
+	position: fixed;
+	width:430px;
+	max-height: 630px;
+	right: -430px;
+	top:45px;
+	background: #333;
+	z-index: 10;
+	opacity: 0.3;
+	color: #ddd;
+	padding: 10px;
+	overflow: auto;
+}
+ #inform_arrow{
+	position: fixed;
+	top:60px;
+	right:0px;
+	font-size: 30px;
+}
+#inform_arrow a{
+	display: block;
+	width:30px;
+	height: 36px;
+	overflow: hidden;
+}
+#inform_arrow a:hover #inform_two_arrow{
+	animation:mymove 1s linear infinite;
+    -webkit-animation:mymove linear 1s infinite;
+    background: #eee;
+}
+#inform_arrow #inform_two_arrow{
+	width: 60px;
+	height: 36px;
+	margin-bottom: 0;
+	position: relative;
+}
+@keyframes mymove{
+	from {right:0px;}
+    to {right:30px;}
+}
+@-webkit-keyframes mymove
+{
+from {right:0px;}
+to {right:30px;}
+}
+#inform h2{
+	font-size: 14px;
+	font-weight: thin;
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background: #ddd;
+	color:#444;
+	border-radius: 5px;
+}
+#inform h2 a{
+	width: 150px;
+	height: 20px;
+	display: inline-block;
+	text-decoration: none;
+}
+#inform h2 a:first-child{
+	border-radius: 5px 0 0 5px;
+	background: #777;
+	color:#ddd;
+}
+#inform h2 a:last-child{
+	border-radius: 0 5px 5px 0;
+	color: #777;
+}
+#inform hr{
+	margin:5px auto;
+	color: #ddd;
+}
+#inform #inform_right_head a{
+	text-decoration: none;
+	color:#86b846;
+}
+#inform #inform_right_body,#inform .inform_left_body{
+	padding-left:20px;
+	padding-right: 20px;
+	font-size: 12px;
+}
+#inform #inform_left li{
+	position: relative;
+}
+#inform .inform_delete{
+	position: absolute;
+	top:20px;
+	right: 20px;
+	color:#777;
+	font-size: 12px;
+	width:30px;
+	height: 14px;
+	text-align: center;
+	line-height: 14px;
+	border-radius: 5px;
+	background: #ddd;
+}
+/*GET 10*/
+#get_10{
+	display: block;
+	width:100%;
+	height: 35px;
+	color:#999;
+	text-align: center;
+	line-height: 35px;
+	background: #eee;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
+#get_10:hover{
+	background: #ddd;
+	color:#333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
