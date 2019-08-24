@@ -5,7 +5,7 @@ function serverSocket(server) {
   var io = require('socket.io')(server);
   io.on('connection', function (socket) {
     socket.on('hello', function (data) {
-      socket.emit('hello. I am hyobin bot. I like jjam bbong. You said : ' + data.msg);
+      socket.emit('hello', 'hello. I am hyobin bot. I like jjam bbong. You said : ' + data.msg);
     });
     socket.on('subscribe', function (data) {
       //console.log(data);
