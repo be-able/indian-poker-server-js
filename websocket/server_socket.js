@@ -1,18 +1,11 @@
 //socket.io模块
-var Blogs = require('../models/blogs');
+const Blogs = require('../models/blogs');
+const bindRoomsApi = require('./api/rooms');
 
 function serverSocket(server) {
   var io = require('socket.io')(server);
   io.on('connection', function (socket) {
-    socket.on('hello', function (data) {
-      socket.emit('hello', 'hello. I am hyobin bot. I like jjam bbong. You said : ' + data.msg);
-    });
-    socket.on('subscribe', function (data) {
-      //console.log(data);
-      data.rooms.forEach(function (ele) {
-        socket.join(ele);
-      });
-    });
+    bindRoomsApi(socket);
     socket.on('add_comment', function (data) {
       console.log(data);
       var blogId = data.blogId;
