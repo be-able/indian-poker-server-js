@@ -27,10 +27,10 @@ function bindRoomsApi(socket) {
     socket.join(data.room);
   });
 
-  socket.on('getRooms', function () {
+  socket.on('getRooms', function (data) {
     const rooms = socket.rooms;
     console.log(rooms);
-    socket.emit('getRooms', {'pid': data.pid, data: rooms});
+    socket.emit('getRooms', {'pid': `${data.pid}`, 'rooms': rooms});
   });
 }
 
