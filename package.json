@@ -1,10 +1,10 @@
 {
-  "name": "bae-Blog-nodejs",
+  "name": "indian-poker-server",
   "version": "1.0.0",
-  "author": "luoran",
-  "description": "The first bae nodejs app!",
+  "author": "dhkim09",
+  "description": "indian poker server",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.12.4",

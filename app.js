@@ -7,7 +7,7 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
-let bae = require('./bae');
+let bae = require('./mongoose');
 
 let app = express();
 

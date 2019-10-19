@@ -6,7 +6,7 @@
 
 > npm install
 
-open the bae.js file. config your database name and password. 
+open the mongoose.js file. config your database name and password. 
 
 ### How to start it?
 
