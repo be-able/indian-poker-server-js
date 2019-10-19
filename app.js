@@ -1,3 +1,5 @@
+import indexNew from "./routesNew/Index";
+
 let express = require('express');
 let path = require('path');
 let favicon = require('serve-favicon');
@@ -7,7 +9,7 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
-let bae = require('./mongoose');
+let mongooseServer = require('./mongoose');
 
 let app = express();
 
@@ -32,7 +34,6 @@ let post_get_10 = require('./routes/post_get_10');
 let span_to_svg = require('./routes/span_to_svg');
 let get_download = require('./routes/get_download');
 let validate_email = require('./routes/validate_email');
-
 //引入自定义方法contains，用来判断一个元素是否是数组的某个元素。contains(array, element);
 //如果包含就返回true，不包含返回false。
 let contains = require('./methods/array_contains');
@@ -50,11 +51,8 @@ app.locals.contains = contains;
 
 //mongoose连接主机：127.0.0.1，端口：12345，数据库：blog
 //mongoose.connect( url ,{user:user,pass:pas});
-bae.getConnect();
+mongooseServer.getConnect();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -70,7 +68,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: {maxAge: 3600000},
   store: new MongoStore({
-    mongooseConnection: bae.mongoose.connection
+    mongooseConnection: mongooseServer.mongoose.connection
   })
 }));
 
@@ -87,6 +85,10 @@ app.use(function (req, res, next) {
     next();
   }
 });
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use('/', index);
 app.use('/', signup);
@@ -108,6 +110,10 @@ app.use('/', span_to_svg);
 app.use('/', get_download);
 app.use('/', validate_email);
 
+// view engine setup
+app.set('views', path.join(__dirname, 'viewsNew'));
+app.set('view engine', 'pug');
+app.use('/v1', indexNew);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -166,8 +172,8 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 //引入socket模块
-let serverSocket = require('./websocket/server_socket');
-serverSocket(server);
+let webSocket = require('./websocket/WebSocket');
+webSocket(server);
 
 /**
  * Normalize a port into a number, string, or false.
