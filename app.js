@@ -1,4 +1,4 @@
-import indexNew from "./routesNew/Index";
+import indexNew from "./src/routesNew/Index";
 
 let express = require('express');
 let path = require('path');
@@ -9,34 +9,34 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
-let mongooseServer = require('./mongoose');
+let mongooseServer = require('./src/mongooseServer');
 
 let app = express();
 
-let User = require('./models/users');
+let User = require('./src/models/users');
 
-let index = require('./routes/index');
-let signup = require('./routes/signup');
-let login_email = require('./routes/login_email');
-let login = require('./routes/login');
-let get_logout = require('./routes/get_logout');
-let post_posts = require('./routes/post_posts');
-let post_comment = require('./routes/post_comment');
-let post_vote = require('./routes/post_vote');
-let post_delate_comment = require('./routes/post_delate_comment');
-let post_title_modify = require('./routes/post_title_modify');
-let post_tag_delete = require('./routes/post_tag_delete');
-let post_tag_add = require('./routes/post_add_tag');
-let post_content_modify = require('./routes/post_content_modify');
-let post_watcher = require('./routes/post_watcher');
-let get_single = require('./routes/get_single');
-let post_get_10 = require('./routes/post_get_10');
-let span_to_svg = require('./routes/span_to_svg');
-let get_download = require('./routes/get_download');
-let validate_email = require('./routes/validate_email');
+let index = require('./src/routes/index');
+let signup = require('./src/routes/signup');
+let login_email = require('./src/routes/login_email');
+let login = require('./src/routes/login');
+let get_logout = require('./src/routes/get_logout');
+let post_posts = require('./src/routes/post_posts');
+let post_comment = require('./src/routes/post_comment');
+let post_vote = require('./src/routes/post_vote');
+let post_delate_comment = require('./src/routes/post_delate_comment');
+let post_title_modify = require('./src/routes/post_title_modify');
+let post_tag_delete = require('./src/routes/post_tag_delete');
+let post_tag_add = require('./src/routes/post_add_tag');
+let post_content_modify = require('./src/routes/post_content_modify');
+let post_watcher = require('./src/routes/post_watcher');
+let get_single = require('./src/routes/get_single');
+let post_get_10 = require('./src/routes/post_get_10');
+let span_to_svg = require('./src/routes/span_to_svg');
+let get_download = require('./src/routes/get_download');
+let validate_email = require('./src/routes/validate_email');
 //引入自定义方法contains，用来判断一个元素是否是数组的某个元素。contains(array, element);
 //如果包含就返回true，不包含返回false。
-let contains = require('./methods/array_contains');
+let contains = require('./src/methods/array_contains');
 
 /*let a = [1,2,3,4,5];
 console.log(contains(a, 6) + ' test');*/
@@ -87,7 +87,7 @@ app.use(function (req, res, next) {
 });
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'jade');
 
 app.use('/', index);
@@ -111,7 +111,7 @@ app.use('/', get_download);
 app.use('/', validate_email);
 
 // view engine setup
-app.set('views', path.join(__dirname, 'viewsNew'));
+app.set('views', path.join(__dirname, '/src/viewsNew'));
 app.set('view engine', 'pug');
 app.use('/v1', indexNew);
 
@@ -172,7 +172,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 //引入socket模块
-let webSocket = require('./websocket/WebSocket');
+let webSocket = require('./src/socket/WebSocket');
 webSocket(server);
 
 /**
