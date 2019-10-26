@@ -5,7 +5,7 @@
   "description": "indian poker server",
   "scripts": {
     "start": "npx babel-node --presets env app.js",
-    "test" : "jest --coverage && jest-coverage-badges"
+    "test": "jest --coverage && jest-coverage-badges"
   },
   "jest": {
     "coverageReporters": [
@@ -20,6 +20,7 @@
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "express": "~4.12.4",
+    "express-mongoose-docs": "^0.3.2",
     "express-session": "1.11.3",
     "jade": "^1.9.2",
     "jest-coverage-badges": "^1.1.2",

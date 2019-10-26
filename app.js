@@ -1,5 +1,3 @@
-import indexNew from "./src/routesNew/Index";
-
 let express = require('express');
 let path = require('path');
 let favicon = require('serve-favicon');
@@ -36,6 +34,10 @@ let get_download = require('./src/routes/get_download');
 let validate_email = require('./src/routes/validate_email');
 //引入自定义方法contains，用来判断一个元素是否是数组的某个元素。contains(array, element);
 //如果包含就返回true，不包含返回false。
+import indexNew from "./src/routesNew/Index";
+import testRest from "./src/routesNew/TestRest";
+let docs = require("express-mongoose-docs");
+
 let contains = require('./src/methods/array_contains');
 
 /*let a = [1,2,3,4,5];
@@ -87,8 +89,8 @@ app.use(function (req, res, next) {
 });
 
 // view engine setup
-app.set('views', path.join(__dirname, '/src/views'));
-app.set('view engine', 'jade');
+// app.set('views', path.join(__dirname, '/src/views'));
+// app.set('view engine', 'jade');
 
 app.use('/', index);
 app.use('/', signup);
@@ -114,6 +116,9 @@ app.use('/', validate_email);
 app.set('views', path.join(__dirname, '/src/viewsNew'));
 app.set('view engine', 'pug');
 app.use('/v1', indexNew);
+app.use('/v1', testRest);
+
+docs(app, mongoose);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
