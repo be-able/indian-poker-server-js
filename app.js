@@ -36,7 +36,8 @@ let validate_email = require('./src/routes/validate_email');
 //如果包含就返回true，不包含返回false。
 import indexNew from "./src/routesNew/Index";
 import testRest from "./src/routesNew/TestRest";
-let docs = require("express-mongoose-docs");
+
+let docs = require("./src/express-mongoose-docs");
 
 let contains = require('./src/methods/array_contains');
 
