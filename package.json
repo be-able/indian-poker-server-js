@@ -24,7 +24,7 @@
     "jade": "^1.9.2",
     "jest-coverage-badges": "^1.1.2",
     "moment": "2.10.3",
-    "mongoose": "4.0.6",
+    "mongoose": "5.7.5",
     "morgan": "~1.5.3",
     "pug": "^2.0.4",
     "serve-favicon": "~2.2.1",
