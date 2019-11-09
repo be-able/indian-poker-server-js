@@ -2,7 +2,7 @@
   "name": "indian-poker-server",
   "version": "1.0.0",
   "author": "dhkim09",
-  "description": "indian poker server",
+  "info": "indian poker server",
   "scripts": {
     "start": "npx babel-node --presets env app.js",
     "test": "jest --coverage && jest-coverage-badges"
@@ -29,7 +29,8 @@
     "pug": "^2.0.4",
     "serve-favicon": "~2.2.1",
     "socket.io": "1.3.6",
-    "socket.io-json-parser": "^2.1.0"
+    "socket.io-json-parser": "^2.1.0",
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

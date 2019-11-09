@@ -114,10 +114,11 @@ app.use('/', get_download);
 app.use('/', validate_email);
 
 // view engine setup
+const API_VERSION = '/v1';
 app.set('views', path.join(__dirname, '/src/viewsNew'));
 app.set('view engine', 'pug');
-app.use('/v1', indexNew);
-app.use('/v1', testRest);
+app.use(API_VERSION, indexNew);
+app.use(API_VERSION, testRest);
 
 docs(app, mongoose);
 

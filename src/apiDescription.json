@@ -1,0 +1,9 @@
+[
+  {
+    "method": "get",
+    "path": "/",
+    "info": {
+      "param": "Users"
+    }
+  }
+]
