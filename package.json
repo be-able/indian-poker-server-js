@@ -5,7 +5,7 @@
   "description": "indian poker server",
   "scripts": {
     "start": "npx babel-node --presets env app.js",
-    "test" : "jest --coverage && jest-coverage-badges"
+    "test": "jest --coverage && jest-coverage-badges"
   },
   "jest": {
     "coverageReporters": [

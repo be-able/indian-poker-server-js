@@ -69,7 +69,7 @@ router.get('/', function (req, res, next) {
                   });
                   let ids = array.join(',');
                   //console.log(ids);
-                  res.render('index', {
+                  res.render('Index', {
                     blogs: blogs10,
                     articles: art,
                     docs: docs5,

@@ -1,0 +1,49 @@
+{
+    "name": "express-mongoose-docs",
+    "description": "Auto-generated API Documentation for Express and Mongoose based APIs",
+    "version": "0.3.0",
+    "author": {
+        "name": "Nabeel Ahmad"
+    },
+    "homepage": "http://nabeel-ahmad.github.io/express-mongoose-docs/",
+    "keywords": [
+        "express",
+        "mongoose",
+        "api",
+        "docs",
+        "documentation",
+        "auto-generator"
+    ],
+    "main": "index.js",
+    "bugs": {
+        "url": "https://github.com/nabeel-ahmad/express-mongoose-docs/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nabeel-ahmad/express-mongoose-docs.git"
+    },
+    "dependencies": {
+        "underscore": "~1.5.2"
+    },
+    "devDependencies": {
+        "express": "3.4.0",
+        "mongoose": "3.8.8",
+        "mocha": "~1.18.2",
+        "supertest": "~0.10.0",
+        "should": "~3.2.0",
+        "coveralls": "~2.10.0",
+        "istanbul": "~0.2.7"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/nabeel-ahmad/express-mongoose-docs/master/LICENSE"
+        }
+    ],
+    "engines": {
+        "node": ">= 0.6.6"
+    },
+    "scripts": {
+        "test": "mocha"
+    }
+}
